@@ -1,15 +1,17 @@
-import React from 'react'
-import './coreconcepts.scss'
+import { CORE_CONCEPTS } from "../../data";
+import CoreConcept from "../CoreConcept/CoreConcept"
 
-const CoreConcepts = ({obj}) => {
-    const { image, title, description} = obj
+const CoreConcepts = () => {
   return (
-    <li id="core-conecpts-id">
-        <img src={image} />
-        <h3>{title}</h3>
-        <p>{description}</p>
-    </li>
-  )
-}
+    <section id="core-concepts">
+      <h2>Core Concepts</h2>
+      <ul>
+        {CORE_CONCEPTS.map((conceptItem) => (
+          <CoreConcept key={conceptItem.title} obj={conceptItem} />
+        ))}
+      </ul>
+    </section>
+  );
+};
 
-export default CoreConcepts
+export default CoreConcepts;
