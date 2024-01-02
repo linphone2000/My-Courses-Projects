@@ -11,7 +11,6 @@ function App() {
       <main>
         <CoreConcepts />
         <Examples />
-        <People />
       </main>
     </>
   );
